@@ -48,7 +48,7 @@ class My_spider(scrapy.Spider):
 
 
 
-    def random_headers():
+    '''def random_headers():
 
         accepts = {"Firefox": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
                     "Safari, Chrome": "application/xml,application/xhtml+xml,text/html;q=0.9, text/plain;q=0.8,image/png,*/*;q=0.5"}
@@ -70,7 +70,7 @@ class My_spider(scrapy.Spider):
             valid_accept = accepts['Firefox'] if chosen_user_agent.find('Firefox') > 0 else accepts['Safari, Chrome']
             headers = {"User-Agent": chosen_user_agent, "Accept": valid_accept}
 
-        return headers
+        return headers'''
 
 
 

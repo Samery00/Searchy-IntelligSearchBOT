@@ -1,0 +1,98 @@
+[33mcommit 9599db3009ca6d5dc7284de41e890ac5be7ec123[m
+Author: samery00 <abdel.samery@gmail.com>
+Date:   Mon Apr 6 16:56:55 2020 +0100
+
+    First commit
+
+[1mdiff --git a/.idea/PFE-realisat.iml b/.idea/PFE-realisat.iml[m
+[1mnew file mode 100644[m
+[1mindex 0000000..d0876a7[m
+[1m--- /dev/null[m
+[1m+++ b/.idea/PFE-realisat.iml[m
+[36m@@ -0,0 +1,8 @@[m
+[32m+[m[32m<?xml version="1.0" encoding="UTF-8"?>[m
+[32m+[m[32m<module type="PYTHON_MODULE" version="4">[m
+[32m+[m[32m  <component name="NewModuleRootManager">[m
+[32m+[m[32m    <content url="file://$MODULE_DIR$" />[m
+[32m+[m[32m    <orderEntry type="inheritedJdk" />[m
+[32m+[m[32m    <orderEntry type="sourceFolder" forTests="false" />[m
+[32m+[m[32m  </component>[m
+[32m+[m[32m</module>[m
+\ No newline at end of file[m
+[1mdiff --git a/.idea/inspectionProfiles/profiles_settings.xml b/.idea/inspectionProfiles/profiles_settings.xml[m
+[1mnew file mode 100644[m
+[1mindex 0000000..105ce2d[m
+[1m--- /dev/null[m
+[1m+++ b/.idea/inspectionProfiles/profiles_settings.xml[m
+[36m@@ -0,0 +1,6 @@[m
+[32m+[m[32m<component name="InspectionProjectProfileManager">[m
+[32m+[m[32m  <settings>[m
+[32m+[m[32m    <option name="USE_PROJECT_PROFILE" value="false" />[m
+[32m+[m[32m    <version value="1.0" />[m
+[32m+[m[32m  </settings>[m
+[32m+[m[32m</component>[m
+\ No newline at end of file[m
+[1mdiff --git a/.idea/modules.xml b/.idea/modules.xml[m
+[1mnew file mode 100644[m
+[1mindex 0000000..301cf82[m
+[1m--- /dev/null[m
+[1m+++ b/.idea/modules.xml[m
+[36m@@ -0,0 +1,8 @@[m
+[32m+[m[32m<?xml version="1.0" encoding="UTF-8"?>[m
+[32m+[m[32m<project version="4">[m
+[32m+[m[32m  <component name="ProjectModuleManager">[m
+[32m+[m[32m    <modules>[m
+[32m+[m[32m      <module fileurl="file://$PROJECT_DIR$/.idea/PFE-realisat.iml" filepath="$PROJECT_DIR$/.idea/PFE-realisat.iml" />[m
+[32m+[m[32m    </modules>[m
+[32m+[m[32m  </component>[m
+[32m+[m[32m</project>[m
+\ No newline at end of file[m
+[1mdiff --git a/.idea/workspace.xml b/.idea/workspace.xml[m
+[1mnew file mode 100644[m
+[1mindex 0000000..64de970[m
+[1m--- /dev/null[m
+[1m+++ b/.idea/workspace.xml[m
+[36m@@ -0,0 +1,39 @@[m
+[32m+[m[32m<?xml version="1.0" encoding="UTF-8"?>[m
+[32m+[m[32m<project version="4">[m
+[32m+[m[32m  <component name="ChangeListManager">[m
+[32m+[m[32m    <list default="true" id="cd0bfc6b-0a4c-4fa5-a5ce-ec169529fcb7" name="Default Changelist" comment="" />[m
+[32m+[m[32m    <option name="SHOW_DIALOG" value="false" />[m
+[32m+[m[32m    <option name="HIGHLIGHT_CONFLICTS" value="true" />[m
+[32m+[m[32m    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />[m
+[32m+[m[32m    <option name="LAST_RESOLUTION" value="IGNORE" />[m
+[32m+[m[32m  </component>[m
+[32m+[m[32m  <component name="FileTemplateManagerImpl">[m
+[32m+[m[32m    <option name="RECENT_TEMPLATES">[m
+[32m+[m[32m      <list>[m
+[32m+[m[32m        <option value="Python Script" />[m
+[32m+[m[32m      </list>[m
+[32m+[m[32m    </option>[m
+[32m+[m[32m  </component>[m
+[32m+[m[32m  <component name="ProjectId" id="1YsypIhre0SNVnse01IPLaAdb0R" />[m
+[32m+[m[32m  <component name="ProjectViewState">[m
+[32m+[m[32m    <option name="hideEmptyMiddlePackages" value="true" />[m
+[32m+[m[32m    <option name="showExcludedFiles" value="true" />[m
+[32m+[m[32m    <option name="showLibraryContents" value="true" />[m
+[32m+[m[32m  </component>[m
+[32m+[m[32m  <component name="PropertiesComponent">[m
+[32m+[m[32m    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />[m
+[32m+[m[32m  </component>[m
+[32m+[m[32m  <component name="SvnConfiguration">[m
+[32m+[m[32m    <configuration />[m
+[32m+[m[32m  </component>[m
+[32m+[m[32m  <component name="TaskManager">[m
+[32m+[m[32m    <task active="true" id="Default" summary="Default task">[m
+[32m+[m[32m      <changelist id="cd0bfc6b-0a4c-4fa5-a5ce-ec169529fcb7" name="Default Changelist" comment="" />[m
+[32m+[m[32m      <created>1583745789516</created>[m
+[32m+[m[32m      <option name="number" value="Default" />[m
+[32m+[m[32m      <option name="presentableId" value="Default" />[m
+[32m+[m[32m      <updated>1583745789516</updated>[m
+[32m+[m[32m    </task>[m
+[32m+[m[32m    <servers />[m
+[32m+[m[32m  </component>[m
+[32m+[m[32m</project>[m
+\ No newline at end of file[m
+[1mdiff --git a/Report of week 2.docx b/Report of week 2.docx[m
+[1mnew file mode 100644[m
+[1mindex 0000000..fc9b52d[m
