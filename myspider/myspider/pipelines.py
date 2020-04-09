@@ -19,6 +19,7 @@ class MyspiderPipeline(object):
     #    'database': 'knowledge_data'
     #    }
 
+#We start the connection to our databse
     def __init__(self, **kwargs):
         self.cnx = self.mysql_connect()
 
@@ -48,18 +49,26 @@ class MyspiderPipeline(object):
             else:
                 print(err)
 
-
+#this function store into our databse the parsed items
     def save(self, item):
         cursor = self.cnx.cursor()
-        create_query = """INSERT INTO websites (title, contents, url) VALUES (%s, %s, %s);"""
+        #Cheking if the value exists after rerunnig the spider
+        exits_query = "SELECT * from websites where title = {} AND url = {} AND contents = {};".format(str(item['title']),str(item['url']),str(item['contents']))
+
+        cursor.execute(exits_query)
+        if cursor.rowcount==1:
+            print("****** Value Already Exists *******")
+            continue
+        else:
+            insert_query = """INSERT INTO websites (title, contents, url) VALUES (%s, %s, %s);"""
 
         # Insert new row
-        cursor.execute(create_query,(str(item['title']),str(item['contents']),str(item['url'])))
+            cursor.execute(insert_query,(str(item['title']),str(item['contents']),str(item['url'])))
 
         # Make sure data is committed to the database
-        self.cnx.commit()
+            self.cnx.commit()
         cursor.close()
-        print("Item saved successfully")
+        print("Items saved successfully")
 
     def mysql_close(self):
         self.cnx.close()
