@@ -13,16 +13,11 @@ class My_spider(scrapy.Spider):
 
     #here we present the urls to our spider to begin with, these are given to parse function to be dealt with
     start_urls = [
-        #"https://fr.m.wikipedia.org/wiki/Web_scraping",
-        'https://www.wikihow.com/Category:Sports-and-Fitness'
+        'https:/https://www.bbc.com/news/world-52428162',
+        'https://fr.m.wikipedia.org/wiki/Web_scraping',
+        'www.wikihow.com/Category:Sports-and-Fitness'
     ]
 
-    #sql_table = """CREATE TABLE IF NOT EXISTS websites (ID int AUTO_INCREMENT,
-    #                                                 title varchar(255),
-    #                                                 contents TEXT,
-    #                                                 url varchar(255),
-    #                                                 code_source TEXT,
-    #                                                 PRIMARY KEY(ID));"""
 
     #This is the main function that
     def parse(self, response):
@@ -62,3 +57,14 @@ class My_spider(scrapy.Spider):
         links = response.css('a')
         #print(links)
         yield from response.follow_all(links, callback = self.parse)
+
+
+
+
+
+    #sql_table = """CREATE TABLE IF NOT EXISTS websites (ID int AUTO_INCREMENT,
+    #                                                 title varchar(255),
+    #                                                 contents TEXT,
+    #                                                 url varchar(255),
+    #                                                 code_source TEXT,
+    #                                                 PRIMARY KEY(ID));"""
