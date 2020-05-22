@@ -38,9 +38,12 @@ class MyspiderPipeline(object):
                 valid = False
                 raise DropItem("Missing {0}!".format(data))
         if valid:
-            self.collection.insert(dict(item))
-            logging.info("Item added to MongoDB database!",
-                    level=logging.DEBUG, spider=spider)
+            dup_check = self.collection.find({'title':item['title'],'url':item['url'],'contents':item['contents']}).count()
+            if dup_check == 0 :
+                self.collection.insert(dict(item))
+                logging.info("Item added to MongoDB database!", level=logging.DEBUG, spider=spider)
+            else:
+                print("Already Exist") 
         return item
 
     # def close_spider(self, spider):

@@ -45,7 +45,7 @@ with open("vocabulary_websites.txt", "w", encoding="utf-8") as file:
 
 ## Create vector for Query/search keywords
 
-def gen_vector_T(tokens):
+def gen_vector(tokens):
 
     Q = np.zeros((len(vocabulary)))
 
@@ -64,7 +64,7 @@ def cosine_sim(a, b):
     return cos_sim
 
 # Calculate Cosine similarity of trained Tfidf to input query
-def cosine_similarity_T(num_results, query):
+def cosine_similarity(num_results, query):
     #print("Cosine Similarity")
     preprocessed_query = preprocessed_query = re.sub("\W+", " ", query).strip()
     tokens = word_tokenize(str(preprocessed_query))
@@ -81,7 +81,7 @@ def cosine_similarity_T(num_results, query):
 
     d_cosines = []
 
-    query_vector = gen_vector_T(q_df['q_clean'])
+    query_vector = gen_vector(q_df['q_clean'])
 
     for d in tfidf_tran.A:
 
@@ -100,5 +100,5 @@ def cosine_similarity_T(num_results, query):
     for j,simScore in enumerate(d_cosines[-num_results:][::-1]):
         results.loc[j,'Score'] = simScore
     return results
-results = cosine_similarity_T(10,'privacy, data')
+results = cosine_similarity(10,'web scraping with python')
 print(results)

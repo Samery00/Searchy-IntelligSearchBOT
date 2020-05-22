@@ -3,7 +3,7 @@ import scrapy
 from scrapy import Selector
 from urllib.parse import urlparse
 from bs4 import BeautifulSoup
-import mysql.connector
+# import mysql.connector
 from ..items import MyspiderItem
 
 
